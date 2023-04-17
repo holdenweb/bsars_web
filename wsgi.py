@@ -26,11 +26,11 @@ env = Environment(
 logger = getLogger(__name__)
 
 
-@app.route("/<name>.html")
+@app.route("/static/<anything>")
 def html_page(name):
     try:
         with open(
-            os.path.join(appfile_dir, "static", f"{name}.html")
+            os.path.join(appfile_dir, "static", anything)
         ) as f:
             return Response(f.read())
     except FileNotFoundError:
