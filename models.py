@@ -2,7 +2,14 @@ from mongoengine import (Document, DateTimeField, DictField, StringField, IntFie
                          URLField, ListField, EmbeddedDocument, EmbeddedDocumentField)
 
 class Article(Document):
-    id = UUIDField(primary_key=True)
+    article_no = IntField()
     title = StringField()
-    pubdate = DateTimeField()
+    pub_date = DateTimeField()
+    content = StringField()
+
+
+class Writings(Document):
+    article_no = IntField()
+    title = StringField()
+    pub_date = DateTimeField()
     content = StringField()

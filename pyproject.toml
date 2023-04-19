@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "bsars-web"
+version = "0.1.0"
+description = "BSARS Web Site"
+authors = ["Steve Holden <steve@holdenweb.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "wsgi.py" },
+]
+[tool.poetry.dependencies]
+python = "^3.10"
+argparse-ext = "^1.4.2"
+click = "^8.1.3"
+dnspython = "^2.3.0"
+flask = "^2.2.3"
+flask-wtf = "^1.1.1"
+itsdangerous = "^2.1.2"
+jinja-cli = "^1.2.2"
+jinja2 = "^3.1.2"
+markdown = "^3.4.3"
+markupsafe = "^2.1.2"
+mongoengine = "^0.27.0"
+pymongo = "^4.3.3"
+pyyaml = "^6.0"
+werkzeug = "^2.2.3"
+wtforms = "^3.0.1"
+xmltodict = "^0.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

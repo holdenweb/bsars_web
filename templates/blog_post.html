@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+      <!-- inner page section -->
+      <section class="inner_page_head">
+         <div class="container_fluid">
+            <div class="row">
+               <div class="col-md-2"></div>
+               <div class="col-md-8">
+                  <div class="full">
+                     <h3>News and history</h3>
+                  </div>
+               </div>
+               <div class="col-md-2"></div>
+            </div>
+         </div>
+      </section>
+      <!-- end inner page section -->
+      <!-- why section -->
+      <section class="why_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-2"></div>
+               <div class="col-md-8">
+                  <div class="heading_container heading_center">
+                     <h2>
+                        {{ art.title | safe }}
+                     </h2>
+                     <h5>
+                        {{ art.pub_date.strftime("%A, %d %b, %Y") | safe }}
+                     </h5>
+                  </div>
+                  {{ art.content | safe }}
+            </div>
+               <div class="col-md-2"></div>
+         </div>
+      </section>
+      <!-- end why section -->
+{% endblock %}
